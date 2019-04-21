@@ -14,31 +14,36 @@ class ViewController: UIViewController {
     
     var audioPlayer = AVAudioPlayer()
     
+    @IBOutlet weak var gameOver: UILabel!
     @IBOutlet weak var viewBG: UIView!
     @IBOutlet weak var mario: UIImageView!
     @IBOutlet weak var bo: UIImageView!
     
+    @IBAction func `return`(_ sender: UIButton) {
+        performSegue(withIdentifier: "toStart", sender: self)
+    }
+    
     @IBAction func touchScrenn(_ sender: UIButton) {
-        
-        if (mario.frame.intersects(bo.frame)){
-            print("Intersects")
-            self.mario.frame.origin.y = -1
-            sender.isEnabled=false
-        }
         
         UIView.animate(withDuration: 1, animations:
             {
                 self.mario.frame.origin.y-=100
             }, completion: nil)
         
-        if self.mario.frame.origin.y>550 {
-            self.mario.frame.origin.y=550
+        if self.mario.frame.origin.y>630 {
+            self.mario.frame.origin.y=630
         }
         else
         {
             moveDown()
         }
-    
+        
+        if (self.mario.frame.intersects(self.mario.convert(self.bo.frame,from: bo))){
+            print("Intersects")
+            self.mario.frame.origin.y = -111
+            sender.isEnabled = false
+            gameOver.text="GAME OVER"
+        }
         
     }
     
@@ -46,7 +51,7 @@ class ViewController: UIViewController {
     {
         UIView.animate(withDuration: 3, animations:
             {
-                self.mario.frame.origin.y+=100
+                self.mario.frame.origin.y+=50
             }, completion: nil)
     }
     
