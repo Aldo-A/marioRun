@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D72-gO-3b5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D72-gO-3b5">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -128,18 +128,10 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMH-L1-2SH">
-                                        <rect key="frame" x="0.0" y="0.0" width="422" height="740"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="422" height="899"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="touchScrenn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQg-05-nbp"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gy3-qd-cCA">
-                                        <rect key="frame" x="148" y="42" width="78" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Music: Play"/>
-                                        <connections>
-                                            <action selector="PlayMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GIk-on-gos"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeT-JT-3RM">
@@ -151,6 +143,15 @@
                                         </state>
                                         <connections>
                                             <action selector="return:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RmQ-nO-jS2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gy3-qd-cCA">
+                                        <rect key="frame" x="156" y="48" width="102" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                        <state key="normal" title="Audio On / Off"/>
+                                        <connections>
+                                            <action selector="audio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nUU-gt-ymM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -183,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65" y="-475"/>
+            <point key="canvasLocation" x="-65.217391304347828" y="-475.44642857142856"/>
         </scene>
         <!--Bowser Start-->
         <scene sceneID="QeX-3K-5Nn">
@@ -235,6 +236,15 @@
                                 </state>
                                 <connections>
                                     <action selector="return:" destination="Ela-eI-lKs" eventType="touchUpInside" id="71g-jk-wd5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hn-n8-GQh">
+                                <rect key="frame" x="157" y="58" width="102" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="Audio On / Off"/>
+                                <connections>
+                                    <action selector="audio:" destination="Ela-eI-lKs" eventType="touchUpInside" id="Vzn-dM-Raf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -315,6 +325,15 @@
                                     <action selector="return:" destination="dRp-0z-ZbE" eventType="touchUpInside" id="W1I-T9-5tl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiJ-4m-jtQ">
+                                <rect key="frame" x="156" y="55" width="102" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="Audio On / Off"/>
+                                <connections>
+                                    <action selector="audio:" destination="dRp-0z-ZbE" eventType="touchUpInside" id="bg7-q4-2st"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -393,6 +412,15 @@
                                     <action selector="return:" destination="V7w-EK-IET" eventType="touchUpInside" id="K3j-HR-fml"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFx-eb-BoB">
+                                <rect key="frame" x="158" y="57" width="102" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="Audio On / Off"/>
+                                <connections>
+                                    <action selector="audio:" destination="V7w-EK-IET" eventType="touchUpInside" id="tXQ-g7-D6Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -469,6 +497,15 @@
                                 </state>
                                 <connections>
                                     <action selector="return:" destination="6Ia-Fu-yxV" eventType="touchUpInside" id="ThF-Ce-IVJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaI-xM-ok4">
+                                <rect key="frame" x="158" y="57" width="102" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="Audio On / Off"/>
+                                <connections>
+                                    <action selector="audio:" destination="6Ia-Fu-yxV" eventType="touchUpInside" id="PHF-rj-Lx2"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -12,6 +12,9 @@ import AVFoundation
 
 class warioGame: UIViewController {
     
+    var AudioPlayer = AVAudioPlayer()
+    var isPlaying = true
+    
     @IBOutlet weak var viewBG: UIView!
     @IBOutlet weak var wario: UIImageView!
     @IBOutlet weak var bo: UIImageView!
@@ -54,7 +57,28 @@ class warioGame: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "GameMusic", ofType: "mp3")!)
+        AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
+        AudioPlayer.prepareToPlay()
+        AudioPlayer.numberOfLoops = -1
+        AudioPlayer.play()
         setupBG()
+    }
+    
+    @IBAction func audio(_ sender: UIButton) {
+        if(isPlaying)
+        {
+            AudioPlayer.stop()
+            isPlaying = false
+            
+            
+        }
+        else{
+            AudioPlayer.play()
+            isPlaying = true
+        }
+        
     }
     
     private func setupBG()

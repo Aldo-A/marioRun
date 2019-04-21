@@ -12,12 +12,29 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    var audioPlayer = AVAudioPlayer()
+    var AudioPlayer = AVAudioPlayer()
+    var isPlaying = true
     
     @IBOutlet weak var gameOver: UILabel!
     @IBOutlet weak var viewBG: UIView!
     @IBOutlet weak var mario: UIImageView!
     @IBOutlet weak var bo: UIImageView!
+    
+    
+    @IBAction func audio(_ sender: UIButton) {
+        if(isPlaying)
+        {
+            AudioPlayer.stop()
+            isPlaying = false
+            
+            
+        }
+        else{
+            AudioPlayer.play()
+            isPlaying = true
+        }
+        
+    }
     
     @IBAction func `return`(_ sender: UIButton) {
         performSegue(withIdentifier: "toStart", sender: self)
@@ -58,6 +75,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "GameMusic", ofType: "mp3")!)
+        AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
+        AudioPlayer.prepareToPlay()
+        AudioPlayer.numberOfLoops = -1
+        AudioPlayer.play()
         setupBG()
     }
     
@@ -82,8 +104,6 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func PlayMusic(_ sender: Any) {
-        
-    }
+
     
 }
