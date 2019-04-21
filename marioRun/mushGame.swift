@@ -14,6 +14,12 @@ class mushGame: UIViewController {
     
     @IBOutlet weak var viewBG: UIView!
     @IBOutlet weak var mush: UIImageView!
+    @IBOutlet weak var gameOver: UILabel!
+    @IBOutlet weak var bo: UIImageView!
+    
+    @IBAction func `return`(_ sender: UIButton) {
+        performSegue(withIdentifier: "toStart", sender: self)
+    }
     
     @IBAction func touchScrenn(_ sender: UIButton) {
         
@@ -22,12 +28,19 @@ class mushGame: UIViewController {
                 self.mush.frame.origin.y-=100
         }, completion: nil)
         
-        if self.mush.frame.origin.y>550 {
-            self.mush.frame.origin.y=550
+        if self.mush.frame.origin.y>630 {
+            self.mush.frame.origin.y=630
         }
         else
         {
             moveDown()
+        }
+        
+        if (self.mush.frame.intersects(self.mush.convert(self.bo.frame,from: bo))){
+            print("Intersects")
+            self.mush.frame.origin.y = -111
+            sender.isEnabled = false
+            gameOver.text="GAME OVER"
         }
         
         
@@ -37,7 +50,7 @@ class mushGame: UIViewController {
     {
         UIView.animate(withDuration: 3, animations:
             {
-                self.mush.frame.origin.y+=100
+                self.mush.frame.origin.y+=50
         }, completion: nil)
     }
     

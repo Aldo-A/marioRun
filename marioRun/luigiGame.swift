@@ -14,6 +14,12 @@ class luigiGame: UIViewController {
     
     @IBOutlet weak var viewBG: UIView!
     @IBOutlet weak var luigi: UIImageView!
+    @IBOutlet weak var bo: UIImageView!
+    @IBOutlet weak var gameOver: UILabel!
+    
+    @IBAction func `return`(_ sender: UIButton) {
+        performSegue(withIdentifier: "toStart", sender: self)
+    }
     
     @IBAction func touchScrenn(_ sender: UIButton) {
         
@@ -22,12 +28,19 @@ class luigiGame: UIViewController {
                 self.luigi.frame.origin.y-=100
         }, completion: nil)
         
-        if self.luigi.frame.origin.y>550 {
-            self.luigi.frame.origin.y=550
+        if self.luigi.frame.origin.y>630 {
+            self.luigi.frame.origin.y=630
         }
         else
         {
             moveDown()
+        }
+        
+        if (self.luigi.frame.intersects(self.luigi.convert(self.bo.frame,from: bo))){
+            print("Intersects")
+            self.luigi.frame.origin.y = -111
+            sender.isEnabled = false
+            gameOver.text="GAME OVER"
         }
         
         
@@ -37,7 +50,7 @@ class luigiGame: UIViewController {
     {
         UIView.animate(withDuration: 3, animations:
             {
-                self.luigi.frame.origin.y+=100
+                self.luigi.frame.origin.y+=50
         }, completion: nil)
     }
     

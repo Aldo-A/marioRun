@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D72-gO-3b5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D72-gO-3b5">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -100,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NwT-Bl-NPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1059.4202898550725" y="23.64130434782609"/>
+            <point key="canvasLocation" x="-1072" y="-369"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -183,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-52.173913043478265" y="43.206521739130437"/>
+            <point key="canvasLocation" x="-65" y="-475"/>
         </scene>
         <!--Bowser Start-->
         <scene sceneID="QeX-3K-5Nn">
@@ -220,7 +220,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai4-Yv-sbl">
-                                <rect key="frame" x="27" y="317" width="359" height="102"/>
+                                <rect key="frame" x="28" y="317" width="359" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="47"/>
                                 <color key="textColor" red="0.96620899439999997" green="0.0" blue="0.07221777771" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -235,7 +235,6 @@
                                 </state>
                                 <connections>
                                     <action selector="return:" destination="Ela-eI-lKs" eventType="touchUpInside" id="71g-jk-wd5"/>
-                                    <action selector="return:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqw-tZ-9zm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -262,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mm3-hv-tn3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-52.173913043478265" y="818.47826086956525"/>
+            <point key="canvasLocation" x="-64" y="312"/>
         </scene>
         <!--Wario Game-->
         <scene sceneID="Rwi-63-1aJ">
@@ -277,11 +276,16 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8CC-oS-HPo">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bowser" translatesAutoresizingMaskIntoConstraints="NO" id="zhz-x9-TE1">
+                                        <rect key="frame" x="21" y="130" width="48" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wario" translatesAutoresizingMaskIntoConstraints="NO" id="Y7D-GD-oCP">
-                                        <rect key="frame" x="8" y="550" width="61" height="51"/>
+                                        <rect key="frame" x="8" y="630" width="61" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -291,6 +295,24 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <connections>
                                     <action selector="touchScrenn:" destination="dRp-0z-ZbE" eventType="touchUpInside" id="3jv-MH-DDw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="857-sv-uXo">
+                                <rect key="frame" x="28" y="317" width="359" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="47"/>
+                                <color key="textColor" red="0.96620899439999997" green="0.0" blue="0.07221777771" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ak7-qd-LD5">
+                                <rect key="frame" x="25" y="41" width="53" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.96620899439999997" green="0.6540320087" blue="0.052822206070000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="return:" destination="dRp-0z-ZbE" eventType="touchUpInside" id="W1I-T9-5tl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -308,6 +330,8 @@
                         <viewLayoutGuide key="safeArea" id="9bt-OT-Csu"/>
                     </view>
                     <connections>
+                        <outlet property="bo" destination="zhz-x9-TE1" id="cT3-aU-Xjn"/>
+                        <outlet property="gameOver" destination="857-sv-uXo" id="lGm-7X-5XY"/>
                         <outlet property="viewBG" destination="5s0-dj-tup" id="2F9-qp-nQq"/>
                         <outlet property="wario" destination="Y7D-GD-oCP" id="yM3-Fk-SxL"/>
                         <segue destination="D72-gO-3b5" kind="presentation" identifier="toStart" id="pQn-2t-QC5"/>
@@ -315,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMF-Kq-jB2" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1059" y="1026"/>
+            <point key="canvasLocation" x="-2371.0144927536235" y="-505.43478260869568"/>
         </scene>
         <!--Mush Game-->
         <scene sceneID="Qhn-eR-WUm">
@@ -330,11 +354,16 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6vz-st-Fix">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bowser" translatesAutoresizingMaskIntoConstraints="NO" id="vBD-0W-ApD">
+                                        <rect key="frame" x="21" y="130" width="48" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mush" translatesAutoresizingMaskIntoConstraints="NO" id="Uid-NQ-RrE">
-                                        <rect key="frame" x="8" y="550" width="61" height="51"/>
+                                        <rect key="frame" x="8" y="630" width="61" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -344,6 +373,24 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <connections>
                                     <action selector="touchScrenn:" destination="V7w-EK-IET" eventType="touchUpInside" id="gwt-GS-eOD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPv-ix-Y7K">
+                                <rect key="frame" x="28" y="317" width="359" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="47"/>
+                                <color key="textColor" red="0.96620899439999997" green="0.0" blue="0.07221777771" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0G-0g-3iS">
+                                <rect key="frame" x="25" y="41" width="53" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.96620899439999997" green="0.6540320087" blue="0.052822206070000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="return:" destination="V7w-EK-IET" eventType="touchUpInside" id="K3j-HR-fml"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -361,6 +408,8 @@
                         <viewLayoutGuide key="safeArea" id="15f-Hy-q30"/>
                     </view>
                     <connections>
+                        <outlet property="bo" destination="vBD-0W-ApD" id="xkp-ND-pdb"/>
+                        <outlet property="gameOver" destination="BPv-ix-Y7K" id="qra-LH-YrK"/>
                         <outlet property="mush" destination="Uid-NQ-RrE" id="pgP-17-mnh"/>
                         <outlet property="viewBG" destination="orJ-LG-XUq" id="ync-2K-4Yr"/>
                         <segue destination="D72-gO-3b5" kind="presentation" identifier="toStart" id="3eF-ah-HnL"/>
@@ -368,7 +417,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gg0-SN-Llk" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2349" y="678"/>
+            <point key="canvasLocation" x="-1284.0579710144928" y="389.67391304347831"/>
         </scene>
         <!--Luigi Game-->
         <scene sceneID="Fcs-Xm-eli">
@@ -383,11 +432,16 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1fB-YA-GKq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bowser" translatesAutoresizingMaskIntoConstraints="NO" id="MBL-gz-G8l">
+                                        <rect key="frame" x="21" y="130" width="48" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="luigi" translatesAutoresizingMaskIntoConstraints="NO" id="rAr-io-SYV">
-                                        <rect key="frame" x="8" y="550" width="61" height="51"/>
+                                        <rect key="frame" x="8" y="630" width="61" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -397,6 +451,24 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <connections>
                                     <action selector="touchScrenn:" destination="6Ia-Fu-yxV" eventType="touchUpInside" id="6cb-Qc-FUk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGo-6V-ORd">
+                                <rect key="frame" x="28" y="317" width="359" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="47"/>
+                                <color key="textColor" red="0.96620899439999997" green="0.0" blue="0.07221777771" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZa-vC-SIt">
+                                <rect key="frame" x="25" y="41" width="53" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.96620899439999997" green="0.6540320087" blue="0.052822206070000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="return:" destination="6Ia-Fu-yxV" eventType="touchUpInside" id="ThF-Ce-IVJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -414,6 +486,8 @@
                         <viewLayoutGuide key="safeArea" id="Vhl-05-FvH"/>
                     </view>
                     <connections>
+                        <outlet property="bo" destination="MBL-gz-G8l" id="2nN-eE-tYd"/>
+                        <outlet property="gameOver" destination="FGo-6V-ORd" id="w99-Qg-TFA"/>
                         <outlet property="luigi" destination="rAr-io-SYV" id="C04-mt-0AE"/>
                         <outlet property="viewBG" destination="S9e-l7-FpK" id="gPL-n5-MnE"/>
                         <segue destination="D72-gO-3b5" kind="presentation" identifier="toStart" id="dRq-F4-8mi"/>
@@ -421,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIv-cC-Sjl" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1927" y="-348"/>
+            <point key="canvasLocation" x="-2268.1159420289855" y="359.51086956521743"/>
         </scene>
     </scenes>
     <resources>
@@ -432,6 +506,6 @@
         <image name="wario" width="680" height="680"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VGL-e1-5AC"/>
+        <segue reference="3eF-ah-HnL"/>
     </inferredMetricsTieBreakers>
 </document>
